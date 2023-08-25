@@ -1,0 +1,31 @@
+$transition-time: .1s;
+
+.button {
+    @apply py-3 px-5 rounded-md flex gap-2 items-center;
+    transition: filter $transition-time;
+
+    &.icon {
+        padding: 1.2rem;
+        border-radius: 100%;
+    }
+
+    &.lighten {
+        &:hover {
+            filter: brightness(1.2);
+        }
+
+        &:active {
+            filter: brightness(1);
+        }
+    }
+
+    &.darken {
+        &:hover {
+            filter: brightness(0.8);
+        }
+
+        &:active {
+            filter: brightness(1);
+        }
+    }
+}
