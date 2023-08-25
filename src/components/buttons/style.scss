@@ -1,5 +1,10 @@
 $transition-time: .1s;
 
+$disabled-bg: bg-gray-300;
+$light-brightnes: 1.2;
+$dark-brightness: .8;
+$active-brightness: 1;
+
 .button {
     @apply py-3 px-5 rounded-md flex gap-2 items-center;
     transition: filter $transition-time;
@@ -11,21 +16,29 @@ $transition-time: .1s;
 
     &.lighten {
         &:hover {
-            filter: brightness(1.2);
+            filter: brightness($light-brightnes);
         }
 
         &:active {
-            filter: brightness(1);
+            filter: brightness($active-brightness);
         }
     }
 
     &.darken {
         &:hover {
-            filter: brightness(0.8);
+            filter: brightness($dark-brightness);
         }
 
         &:active {
-            filter: brightness(1);
+            filter: brightness($active-brightness);
+        }
+    }
+
+    &:disabled {
+        @apply #{$disabled-bg};
+
+        &:hover {
+            filter: none;
         }
     }
 }

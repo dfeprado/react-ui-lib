@@ -7,10 +7,15 @@ import './style.scss';
  * @param props Set of `ButtonProps` options
  */
 export default function Button(props: ButtonProps) {
-    const classes = `button ${props.raised ? raisedClasses : ''} ${props.effect} ${props.className}`;
+    const classes = 
+        `button 
+        ${props.raised ? raisedClasses : ''} 
+        ${props.effect} 
+        ${props.className}`;
 
     return (
-        <button className={classes}>
+        <button className={classes}
+            disabled={props.disabled}>
             {props.children}
         </button>
     );
