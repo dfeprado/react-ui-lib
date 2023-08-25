@@ -1,6 +1,7 @@
 $transition-time: .1s;
 
 $disabled-bg: bg-gray-300;
+$disabled-text: text-gray-500;
 $light-brightnes: 1.2;
 $dark-brightness: .8;
 $active-brightness: 1;
@@ -35,7 +36,7 @@ $active-brightness: 1;
     }
 
     &:disabled {
-        @apply #{$disabled-bg};
+        @apply #{$disabled-bg} #{$disabled-text};
 
         &:hover {
             filter: none;

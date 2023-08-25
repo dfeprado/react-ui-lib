@@ -15,7 +15,8 @@ export default function Page() {
                 
                 <Button effect="darken" 
                     className="bg-white"
-                    disabled>
+                    disabled
+                    raised={true}>
                     <p>TV</p>
                     {tvIcon}
                 </Button>

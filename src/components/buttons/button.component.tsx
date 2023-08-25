@@ -9,7 +9,7 @@ import './style.scss';
 export default function Button(props: ButtonProps) {
     const classes = 
         `button 
-        ${props.raised ? raisedClasses : ''} 
+        ${props.raised && !props.disabled ? raisedClasses : ''} 
         ${props.effect} 
         ${props.className}`;
 
